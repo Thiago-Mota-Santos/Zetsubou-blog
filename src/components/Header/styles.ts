@@ -15,6 +15,7 @@ export const Container = styled.div`
     >h1{
         margin-left: 20px;
         font-size: 14px;
+        cursor:pointer;
         color:var(--HeaderItemColor);
 
         &:hover{
