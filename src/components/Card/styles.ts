@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     background: var(--header-dark);
-    /* border: 1px solid var(--border); */
+    border: 1px solid var(--border);
 
     > header{
         display: flex;
@@ -42,6 +42,10 @@ export const ImagePreview = styled.img`
     min-width: 100%;
     max-width: 100%;
     height: auto;
+
+    @media screen and (max-width: 500px){
+        /* width: 60%; */
+    }
 `;
 
 

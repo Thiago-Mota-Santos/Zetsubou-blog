@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    width: 100%;
     position: sticky;
+    z-index: 2;
     box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px;
     top: 0;
     height: 54px;

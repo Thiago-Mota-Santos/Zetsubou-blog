@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import Banner from "../components/Banner";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Header />
+      <Banner />
       {/* <Card
         img_url={"https://avatars.githubusercontent.com/u/75326612?v=4"}
         title={"lorem lorem lorem lorem"}
