@@ -1,35 +1,26 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    display:flex;
-    flex-direction: column;
-    width: 303px;
-    height: 500px;
-    background: var(--header);
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1280px;
+  margin-top: 16px;
 
-`;
+  > div{
+    margin-top: 8px;
+    display: grid;
+    grid-gap: 25px;
 
-export const ImagePreview = styled.img`
-    width: 303px;
-    height: 190px;
-`;
-export const Title = styled.a`
-    margin-top: 30px;
-    font-size: 18px;
-    color: rgb(232, 230, 227);
-`;
-export const  SubTitle = styled.span`
-    font-size: 14px;
-    color: rgb(232, 230, 227);
+    grid-template-columns: 1fr;
 
-`;
-export const  Description = styled.p`
-    font-size: 14px;
-    color: rgb(232, 230, 227);
-`;
-export const  ReadMore = styled.a`
-    font-size: 14px;
-    margin-top: 80px;
-    margin-left: 0;
-    color: purple;
+    @media screen and (min-width:768px){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 980px){
+      grid-template-columns: 1fr 1fr 1fr;
+
+    }
+  }
 `;

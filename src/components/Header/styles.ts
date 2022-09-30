@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 54px;
     display: flex;
+    position: sticky;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px;
+    top: 0;
+    height: 54px;
     align-items: center;
     padding: 11px 30px;
-    background: var(--header);
+    background: var(--header-dark);
 
    >div{
     display:flex;
@@ -16,10 +19,10 @@ export const Container = styled.div`
         margin-left: 20px;
         font-size: 14px;
         cursor:pointer;
-        color:var(--HeaderItemColor);
+        color:var(--header-item);
 
         &:hover{
-            color:var(--HeaderItemColorHover);
+            color:var(--header-item-hover);
             transition: color 0.5s ease-out;
         }
     }

@@ -1,36 +1,22 @@
 import React from "react";
+import Card from "../Card";
 
-import {
-  Container,
-  ImagePreview,
-  Title,
-  SubTitle,
-  Description,
-  ReadMore,
-} from "./styles";
+import { Container } from "./styles";
 
-interface ContentProps {
-  img_url: string;
-  title: string;
-  subtitle: string;
-  description: string;
-}
-
-const Content: React.FC<ContentProps> = ({
-  img_url,
-  title,
-  subtitle,
-  description,
-}) => {
+const Content: React.FC = () => {
   return (
     <Container>
-      <ImagePreview src={img_url} />
-      <Title>{title}</Title>
       <div>
-        <SubTitle>{subtitle}</SubTitle>
-        <Description>{description}</Description>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+          <Card
+            key={n}
+            img_url={"https://w.wallhaven.cc/full/m9/wallhaven-m9g5xm.png"}
+            title={"Analise de desenho ruim que otário hypa"}
+            subtitle={"by Th | Apr 23, 2022 | Review"}
+            description={"babababbabababbabababababababababababababababba"}
+          />
+        ))}
       </div>
-      <ReadMore>Read More</ReadMore>
     </Container>
   );
 };
