@@ -19,6 +19,7 @@ export const Container = styled.div`
         font-size: 14px;
         color: var(--description-dark);
         letter-spacing: 0.1px;
+        word-break: break-all;
         }
     }
 
@@ -43,9 +44,7 @@ export const ImagePreview = styled.img`
     max-width: 100%;
     height: auto;
 
-    @media screen and (max-width: 500px){
-        /* width: 60%; */
-    }
+   
 `;
 
 

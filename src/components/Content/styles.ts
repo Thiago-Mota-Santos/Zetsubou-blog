@@ -4,7 +4,9 @@ export const Container = styled.div`
   display:flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1280px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
   margin-top: 16px;
 
   > div{
@@ -18,7 +20,7 @@ export const Container = styled.div`
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: 980px){
+    @media screen and (min-width: 1280px){
       grid-template-columns: 1fr 1fr 1fr;
 
     }

@@ -2,18 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   position: relative;
+  flex-shrink: 0;
   justify-content: center;
   z-index: 1;
   
-
+  
 
   >img{
-   /* margin: 0 auto; */
+   margin: 0 auto;
+   width: 100%;
    min-width: 95%;
    max-width: 100%;
+   width: 100%;
+   object-fit: cover;
    height: auto;
 
 }
