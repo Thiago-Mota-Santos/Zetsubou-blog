@@ -44,7 +44,6 @@ export const ImagePreview = styled.img`
     max-width: 100%;
     height: auto;
 
-   
 `;
 
 

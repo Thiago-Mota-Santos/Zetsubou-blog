@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import { Container } from "./styles";
@@ -5,10 +6,18 @@ import { Container } from "./styles";
 const Header: React.FC = () => {
   return (
     <Container>
-      <div>
-        <h1>Home</h1>
-        <h1>Posts</h1>
-      </div>
+      <ul>
+        <li>
+          <Link href={"/"}>
+            <a>home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/posts"}>
+            <a>posts</a>
+          </Link>
+        </li>
+      </ul>
     </Container>
   );
 };

@@ -1,6 +1,4 @@
 import type { AppProps } from "next/app";
-import Banner from "../components/Banner";
-import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -11,18 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Header />
-      <Banner />
-      {/* <Card
-        img_url={"https://avatars.githubusercontent.com/u/75326612?v=4"}
-        title={"lorem lorem lorem lorem"}
-        subtitle={"sublorem sublorem sublorem"}
-        description={
-          "If you are a regular reader of our website, you have probably noticed our interest, or one could call a borderline obsession, surrounding a particular animator group known for their striking designs and contributions to many Toei Animation series, and whose origins..."
-        }
-      /> */}
-      <Content />
-      <Footer />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

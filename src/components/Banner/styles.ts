@@ -48,5 +48,25 @@ export const Wrapper = styled.div`
             color: var(--title-banner);
         }
     }
-   
+
+    @media screen and (max-width: 768px){
+        text-align: center;
+        border-radius: 30px;
+        width: auto;
+        margin: auto;
+
+        >header{
+            margin-top: -12px;
+
+            >h1{
+                font-size: 20px;
+            }
+            >p{
+                font-size: 12px;
+            }
+        }
+    }
+ @media screen and (max-width: 480px){
+    background: none; ;
+ }
 `;  

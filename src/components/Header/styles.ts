@@ -12,21 +12,25 @@ export const Container = styled.div`
     padding: 11px 30px;
     background: var(--header-dark);
 
-   >div{
+   >ul{
     display:flex;
     width: 100%;
     margin-left: 30px;
     
-    >h1{
+    >li{
         margin-left: 20px;
         font-size: 14px;
         cursor:pointer;
+
+        > a{
         color:var(--header-item);
+        text-decoration: none;
 
         &:hover{
             color:var(--header-item-hover);
             transition: color 0.5s ease-out;
         }
+      }   
     }
     
    }

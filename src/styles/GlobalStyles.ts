@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     ul{
         list-style: none;
+    
     }
     :root {
     --header: #FFFFFF;
