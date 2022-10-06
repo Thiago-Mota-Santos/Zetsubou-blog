@@ -40,5 +40,10 @@ export const GlobalStyle = createGlobalStyle`
     --border: #3B4042;
     --title-banner: #FFFFFF;
     --border-banner: rgba(0, 0, 0, 0.29);
+    --post: #b2aca2;
+    --title-post: #c8c3bc;
+    --border-post: rgb(48, 52, 54);
+    
+    
 }
 `

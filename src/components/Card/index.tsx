@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import { Container, ImagePreview, Title, ReadMore } from "./styles";
@@ -22,7 +23,9 @@ const Card: React.FC<CardProps> = ({
       <header>
         <p>{subtitle}</p>
         <p>{description}</p>
-        <ReadMore>Read More</ReadMore>
+        <Link href={"/posts/slug"}>
+          <ReadMore>Read More</ReadMore>
+        </Link>
       </header>
     </Container>
   );
