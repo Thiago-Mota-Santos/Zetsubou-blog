@@ -25,7 +25,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     display: flex;
-    max-width: 900px;
+    max-width: 763px;
     align-items: center;
     position: absolute;
     background: var(--border-banner);

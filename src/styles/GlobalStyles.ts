@@ -43,6 +43,10 @@ export const GlobalStyle = createGlobalStyle`
     --post: #b2aca2;
     --title-post: #c8c3bc;
     --border-post: rgb(48, 52, 54);
+    --border-bottom: rgb(51, 55, 57);
+    --background-box: #262A2B;
+    --border-bottom-ol: rgb(52,56,58);
+
     
     
 }
