@@ -4,19 +4,11 @@ import { FaUserCircle, FaClock } from 'react-icons/fa'
 
 export const Container = styled.div`
     max-width: 850px;
-    /* width: 100%; */
     margin:0 auto;
-    /* border: 2.5px solid var(--border-post); */
     position: relative;
     padding: 15px 0 15px 0;
     background: var(--header-dark);
     overflow: hidden;
-
-    /* >img{
-        width: 100%;
-        height: 24rem;
-        object-fit: cover;
-    } */
 `;
 
 export const ImageContainer = styled.div`
@@ -26,49 +18,29 @@ export const ImageContainer = styled.div`
     width: 100%;
 
     >img{
-        /* width: 97%; */
         max-width: 100%;
         height: auto;
-        /* height: 24rem; */
         object-fit: cover;
     }
 `;
 
 export const ContentWrapper = styled.div`
-    /* display:flex;
-    
-    flex-direction: row; */
-    /* position: relative; */
-    /* max-width: 20%; */
-    /* width: 1280px; */
     margin-left: 53px;
     border: 2.5px solid var(--border-post);
-    /* max-width: 85%; */
-    /* max-width: 97.5%; */
-    padding: 0 1rem;
-    padding-top: 4rem;
-
-    @media screen and (min-width: 640px){
-        /* padding: 0 1.5rem; */
-        padding: 0 0.7rem 0 10px;
-    }
-
-    /* @media screen and (min-width: 1024px){
-        padding: 0 0.7rem 0 10px;
-    } */
+    padding: 0 0.7rem 0 10px;
+    
 
 `; 
 export const TitlePost = styled.div`
-    line-height: 1.75rem;
-    max-width: 65ch;
+    line-height: 1.75rem;  
     margin: 0 auto;
     >h1{
+     font-size: 26px;
      cursor: pointer;
      margin-top: 0.5rem;
      display: block;
             
     color: #ffffff;
-    line-height: 2.25rem;
     text-align: center;
     font-weight: 800;
 
@@ -77,10 +49,7 @@ export const TitlePost = styled.div`
        transition: 0.2s color linear;
     }
 
-    @media (min-width: 640px) {
-    font-size: 1.625rem;
-    line-height: 2.5rem
-}   
+}    
     }
 
     >ul{
@@ -100,17 +69,33 @@ export const TitlePost = styled.div`
                 font-size: 12px;
                 color: var(--description-dark);
                 text-transform: uppercase;
+
+                @media screen and (max-width: 330px){
+                    font-size: 7.5px;
+                    
+                }
             }
         }
-    }
 `;
-export const MainContent = styled.div`
+
+export const Preview = styled.p`
+    margin: 5px 0 30px 0;
+    font-size: 18px;
+    color: #beb9b0;   
+`;
+
+export const MainContent = styled.p`
     margin-top: 1.5rem;
     width: 100%;
-    font-size: 17px;
-    color: var(--post);
+    font-size: 18px;
+    color: #beb9b0;
     margin-left: 0;
-    /* margin: 0 auto; */
+    margin-bottom: 20px;
+
+    >hr{
+        border-bottom: 1px dotted rgb(69, 74, 77);
+        margin-bottom: 20px;
+    }
 `;
 
 const IconCss = css`
