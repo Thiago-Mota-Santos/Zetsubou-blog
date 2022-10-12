@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.0",
+    "@strapi/plugin-graphql": "^4.0.5",
+    "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "@strapi/strapi": "4.4.3",
@@ -23,8 +24,8 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "a6be3b38-23a3-45c1-b220-51f6e4e0d728",
-    "template": "@strapi/template-blog@1.0.0"
+    "uuid": "05ad5900-d0e8-403e-b772-79f595d2c48c",
+    "template": "@strapi/template-blog@"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
