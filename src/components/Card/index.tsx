@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
       <ImagePreview src={img_url} alt={title} />
       <Title>{title}</Title>
       <header>
-        <p>{subtitle}</p>
+        {/* <p>{subtitle}</p> */}
         <p>{description}</p>
         <Link href={href}>
           <ReadMore>Read More</ReadMore>
