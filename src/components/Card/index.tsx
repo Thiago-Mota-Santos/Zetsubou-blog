@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
         {/* <p>{subtitle}</p> */}
         <p>{description}</p>
         <Link href={href}>
-          <ReadMore>Read More</ReadMore>
+          <ReadMore>Leia mais</ReadMore>
         </Link>
       </header>
     </Container>

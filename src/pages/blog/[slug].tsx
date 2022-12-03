@@ -22,12 +22,11 @@ export default function Post({ slug }) {
       <Wrapper>
         <Blog
           title={post.title}
-          name={post.title}
-          date={"24 de outubro"}
+          name={"Th"}
+          // date={post.date}
+          date={"03 Out, 2022"}
           image={post.coverImage.url}
-          previewContent={
-            "lorim impsun ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba"
-          }
+          previewContent={null}
           textContent={post.content.markdown}
         />
         <RightContent />

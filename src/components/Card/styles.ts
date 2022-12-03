@@ -14,11 +14,11 @@ export const Container = styled.div`
         flex-direction: column;
 
         >p{
-        margin: 0 14px 10px 15px;
+        margin: 0 14px 9px 15px;
         font-size: 14px;
         color: var(--description-dark);
         letter-spacing: 0.1px;
-        word-break: break-all;
+        /* word-break: break-all; */
         }
     }
 

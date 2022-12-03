@@ -1,6 +1,9 @@
+/* eslint react/prop-types: 0 */
+
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Image from "next/image";
 
 import {
   Container,
@@ -48,13 +51,17 @@ const slug: React.FC<postProps> = ({
             </ul>
           </TitlePost>
           <ImageContainer>
-            <img src={image} alt={"Image-post"} />
+            <Image src={image} layout="fill" alt={"Image-post"} />
           </ImageContainer>
           <MainContent>
             <Preview>{previewContent}</Preview>
             <hr />
 
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} children={textContent} />
+            <ReactMarkdown
+              // eslint-disable-next-line
+              children={textContent}
+              rehypePlugins={[rehypeRaw]}
+            ></ReactMarkdown>
           </MainContent>
         </ContentWrapper>
       </Container>

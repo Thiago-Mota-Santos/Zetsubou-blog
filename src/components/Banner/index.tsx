@@ -14,8 +14,12 @@ const Banner: React.FC<Props> = ({ title, description }) => {
       <Image src={BannerPic} alt="Banner" />
       <Wrapper>
         <header>
-          <h1>{title}</h1>
-          <p>{description}</p>
+          <h1>{"Bem vindo ao Zetsubou Blog"}</h1>
+          <p>
+            {
+              "O maior overthink está aqui! Venha ao desespero, vamos nos desesperar e burrar juntos!"
+            }
+          </p>
         </header>
       </Wrapper>
     </Container>

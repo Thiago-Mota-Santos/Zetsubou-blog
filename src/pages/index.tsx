@@ -31,7 +31,7 @@ export default function Home() {
         {posts.map((post) => (
           <Card
             key={post.slug}
-            img_url={post.coverImage.url}
+            img_url={post.coverImage.url.toString()}
             title={post.title}
             subtitle={"subtitle"}
             description={post.excerpt}

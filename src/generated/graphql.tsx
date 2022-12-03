@@ -5742,7 +5742,6 @@ export const PostDocument = gql`
     post(where: { slug: $slug }) {
       title
       content {
-        html
         markdown
       }
       coverImage {
@@ -5752,6 +5751,7 @@ export const PostDocument = gql`
           }
         )
       }
+      date
     }
   }
 `;

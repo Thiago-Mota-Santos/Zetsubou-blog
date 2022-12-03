@@ -83,6 +83,7 @@ export const Preview = styled.div`
     margin: 5px 0 30px 0;
     font-size: 18px;  
     color: var(--text-main);
+    margin-bottom: 20px;
     
 `;
 
@@ -91,10 +92,9 @@ export const Preview = styled.div`
 export const MainContent = styled.div`
     margin-top: 1.5rem;
     width: 100%;
-    font-size: 18px;
+    font-size: 17px;
     color: #beb9b0;
     margin-left: 0;
-    margin-bottom: 20px;
 
     >hr{
         border-bottom: 1px dotted rgb(69, 74, 77);
@@ -110,9 +110,21 @@ export const MainContent = styled.div`
 
     p{
         color: var(--text-main);
+        margin-bottom: 20px;
+
     }
 
-    
+    blockquote{
+        margin-left: 65px;
+        font-size: 14px;
+        
+        >p{
+            margin-bottom: 10px;
+         >strong{
+            color:var(--cite);
+         }
+        }
+    }
 `;
 
 const IconCss = css`

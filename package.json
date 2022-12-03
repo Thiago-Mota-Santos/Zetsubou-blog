@@ -10,6 +10,7 @@
     "generate-types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "date-fns": "^2.29.3",
     "graphql": "^16.5.0",
     "next": "12.2.3",
     "next-urql": "^3.3.3",

@@ -4,6 +4,14 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "media.graphassets.com",
+          port: "",
+          pathname: " ",
+        },
+      ],
       allowFutureImage: true,
     },
   },

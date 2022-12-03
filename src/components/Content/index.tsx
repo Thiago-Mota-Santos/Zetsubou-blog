@@ -1,14 +1,4 @@
-import React, { ReactHTML } from "react";
-import {
-  PageDocument,
-  PostsDocument,
-  PostsQuery,
-  PostsQueryVariables,
-  usePageQuery,
-  usePostsQuery,
-} from "../../generated/graphql";
-
-import Card from "../Card";
+import React from "react";
 
 import { Container } from "./styles";
 
