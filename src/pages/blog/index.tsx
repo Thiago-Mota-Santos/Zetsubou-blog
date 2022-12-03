@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { Container } from "./styles";
+import { Container } from "../../styles/styles";
 import {
   PageDocument,
   PostsDocument,

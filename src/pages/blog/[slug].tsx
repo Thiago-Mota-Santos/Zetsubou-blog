@@ -3,7 +3,7 @@ import { PostDocument, usePostQuery } from "../../generated/graphql";
 import Blog from "../../components/Post";
 import RightContent from "../../components/RightContent";
 
-import { Container, Wrapper } from "./slugstyle";
+import { Container, Wrapper } from "../../styles/slugstyle";
 import { client, ssrCache } from "../../graphql/api";
 
 export default function Post({ slug }) {
