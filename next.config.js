@@ -4,20 +4,12 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "media.graphassets.com",
-          port: "",
-          pathname: " ",
-        },
-      ],
       allowFutureImage: true,
     },
   },
   images: {
     loader: "default",
-    domains: ["localhost"],
+    domains: ["media.graphassets.com"],
   },
 };
 
