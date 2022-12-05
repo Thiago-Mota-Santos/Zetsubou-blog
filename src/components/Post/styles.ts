@@ -90,6 +90,7 @@ export const Preview = styled.div`
 
 
 export const MainContent = styled.div`
+    position: relative;
     margin-top: 1.5rem;
     width: 100%;
     font-size: 17px;
@@ -115,11 +116,12 @@ export const MainContent = styled.div`
     }
 
     blockquote{
-        margin-left: 65px;
+        display: flex;
+        justify-content: center;
         font-size: 14px;
         
         >p{
-            margin-bottom: 10px;
+            margin-bottom: 50px;
          >strong{
             color:var(--cite);
          }
