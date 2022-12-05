@@ -90,12 +90,13 @@ export const Preview = styled.div`
 
 
 export const MainContent = styled.div`
-    position: relative;
     margin-top: 1.5rem;
     width: 100%;
     font-size: 17px;
     color: #beb9b0;
     margin-left: 0;
+
+    
 
     >hr{
         border-bottom: 1px dotted rgb(69, 74, 77);
@@ -103,7 +104,7 @@ export const MainContent = styled.div`
     }
 
     img{
-        max-width: 100%;
+        max-width: 100%;  
         height: auto;
         object-fit: cover;
         margin: 7px 0 7px 0;

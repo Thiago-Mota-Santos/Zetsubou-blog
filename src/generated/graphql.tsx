@@ -5690,6 +5690,12 @@ export type PostQueryVariables = Exact<{
 export type PostQuery = {
   __typename?: "Query";
   post?: {
+    seo: {
+      title: string;
+      description: string;
+      publishedAt: Date;
+      keyword: string[];
+    };
     __typename?: "Post";
     title: string;
     content: { __typename?: "RichText"; html: string; markdown: string };
@@ -5752,6 +5758,12 @@ export const PostDocument = gql`
         )
       }
       date
+      seo {
+        title
+        description
+        publishedAt
+        keywords
+      }
     }
   }
 `;

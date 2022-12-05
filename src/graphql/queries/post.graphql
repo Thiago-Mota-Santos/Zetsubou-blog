@@ -12,5 +12,11 @@ query Post($slug: String!) {
       )
     }
     date
+    seo {
+      title
+      description
+      publishedAt
+      keywords
+    }
   }
 }

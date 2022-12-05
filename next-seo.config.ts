@@ -1,13 +1,30 @@
-export default{
+const title = 'Zetsubou Blog'
+const description = "Postagens sobre assuntos aleatórios (as vezes)"
+
+const SEO = {
+    title,
+    canonical: 'https://zetsubou-blog.vercel.app/',
     openGraph:{
         type: 'website',
         locale: 'pt_BR',
         url: 'https://zetsubou-blog.vercel.app/',
-        siteName: 'Zetsubou Blog'
+        siteName: 'Zetsubou Blog',
+        title,
+        description,
+        images: [
+            {
+                url: 'https://zetsubou-blog.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbannerblog.086cff96.png&w=1200&q=75',
+                alt: title,
+                width: 1280,
+                height: 720
+            }
+        ]
     },
     twitter: {
-        handle: '@Teaga014',
+        handle: '@ThiagoMota014',
         site: '@site',
         cardType: 'summary_large_image'
     }
 }
+
+export default SEO;
