@@ -19,7 +19,11 @@ export default function Post({ slug }) {
   });
 
   return (
-    <Page title={post.title} description={post.seo.description} path="">
+    <Page
+      title={post.title}
+      description={post.seo.description}
+      path={`/blog/${slug}`}
+    >
       <Container>
         <Wrapper>
           <Blog
