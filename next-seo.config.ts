@@ -13,7 +13,7 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https://zetsubou-blog.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbannerblog.086cff96.png&w=1200&q=75',
+                url: '',
                 alt: title,
                 width: 1280,
                 height: 720
