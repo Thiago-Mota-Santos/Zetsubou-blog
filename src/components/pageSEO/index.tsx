@@ -9,7 +9,7 @@ export function Page({ title, description, openGraph, path, children }) {
       <Head>
         <link
           rel="shortcut icon"
-          href="https://media.graphassets.com/D5BtA3TIT1OKsdVLUDST"
+          href="https://media.graphassets.com/xU10WhwGTTyjI7tlTwfr"
         />
       </Head>
       <NextSeo

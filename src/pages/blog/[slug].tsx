@@ -3,6 +3,8 @@ import { PostDocument, usePostQuery } from "../../generated/graphql";
 import Blog from "../../components/Post";
 import RightContent from "../../components/RightContent";
 
+import { NextSeo } from "next-seo";
+
 import { Container, Wrapper } from "../../styles/slugstyle";
 import { client, ssrCache } from "../../graphql/api";
 import { Page } from "../../components/pageSEO";
@@ -32,6 +34,7 @@ export default function Post({ slug }) {
     //   }}
     // >
     <Container>
+      <NextSeo noindex={true} />
       <Wrapper>
         <Blog
           title={post.title}
