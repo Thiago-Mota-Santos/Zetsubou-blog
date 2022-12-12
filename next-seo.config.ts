@@ -31,15 +31,4 @@ const SEO = {
 
 export default SEO;
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   await Promise.all([
-//     client.query(PostsDocument).toPromise(),
-//     client.query(PageDocument, { slug: "blog" }).toPromise(),
-//   ]);
 
-//   return {
-//     props: {
-//       urqlState: ssrCache.extractData(),
-//     },
-//   };
-// };
