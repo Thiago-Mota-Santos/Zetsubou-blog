@@ -1,7 +1,7 @@
 
 const title = 'Zetsubou Blog'
 const description = 'Bem vindo ao Zetsubou Blog! Postagens corriqueiras sobre algum assunto aleatório que me interessar.'
-const url = '"https://media.graphassets.com/IGKyrXYSJeNXKi7q1q35"'
+const url = 'kk'
 
 const SEO = {
   title,
