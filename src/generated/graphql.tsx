@@ -5676,6 +5676,9 @@ export type PageQuery = {
     title: string;
     subtitle?: string | null;
     seo?: {
+      image: {
+        url: string;
+      };
       __typename?: "Seo";
       title?: string | null;
       description?: string | null;
@@ -5730,6 +5733,9 @@ export const PageDocument = gql`
       seo {
         title
         description
+        image {
+          url
+        }
       }
     }
   }

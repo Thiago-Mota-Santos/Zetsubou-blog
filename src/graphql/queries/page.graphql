@@ -5,6 +5,9 @@ query Page($slug: String!) {
     seo {
       title
       description
+      image {
+        url
+      }
     }
   }
 }

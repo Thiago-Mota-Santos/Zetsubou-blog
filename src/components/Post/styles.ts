@@ -103,6 +103,7 @@ export const MainContent = styled.div`
         margin-bottom: 20px;
     }
 
+
     img{
         max-width: 100%;  
         height: auto;

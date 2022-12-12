@@ -1,5 +1,25 @@
+import { GetServerSideProps } from "next";
+import { PageDocument, PostsDocument, usePageQuery, usePostsQuery } from "./src/generated/graphql";
+import { client, ssrCache } from "./src/graphql/api";
+
+
+const [{ data }] = usePageQuery({
+    variables: {
+      slug: "home",
+    },
+  });
+
+  const [
+    {
+      data: { posts },
+    },
+  ] = usePostsQuery();
+
+
 const title = 'Zetsubou Blog'
 const description = "Postagens sobre assuntos aleatórios (as vezes)"
+const url = data?.page?.seo.image.url;
+
 
 const SEO = {
     title,
@@ -13,7 +33,7 @@ const SEO = {
         description,
         images: [
             {
-                url: '',
+                url,
                 alt: title,
                 width: 1280,
                 height: 720
@@ -28,3 +48,16 @@ const SEO = {
 }
 
 export default SEO;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+    await Promise.all([
+      client.query(PostsDocument).toPromise(),
+      client.query(PageDocument, { slug: "blog" }).toPromise(),
+    ]);
+  
+    return {
+      props: {
+        urqlState: ssrCache.extractData(),
+      },
+    };
+  };
