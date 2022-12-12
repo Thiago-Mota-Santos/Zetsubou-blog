@@ -4,7 +4,7 @@ import Head from "next/head";
 export function Page({ title, description, openGraph, path, children }) {
   const url = `https://zetsubou-blog.vercel.app/${path}`;
 
-  const image = "https://media.graphassets.com/IGKyrXYSJeNXKi7q1q35";
+  const image = "https://media.graphassets.com/gUXgPOniQ76mqvuB2Bye";
 
   return (
     <div>
