@@ -17,11 +17,12 @@ export default function Post({ slug }) {
       slug,
     },
   });
+
   return (
     <Page
       title={post.title}
       description={post.seo.description}
-      path={`/blog/${slug}`}
+      path={`blog/${slug}`}
       openGraph={{
         images: [
           {
