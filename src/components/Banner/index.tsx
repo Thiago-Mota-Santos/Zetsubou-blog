@@ -8,7 +8,7 @@ interface Props {
   description?: string | null;
 }
 
-const Banner: React.FC<Props> = ({ title, description }) => {
+const Banner: React.FC<Props> = () => {
   return (
     <Container>
       <Image src={BannerPic} alt="Banner" />

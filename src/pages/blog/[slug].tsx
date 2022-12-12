@@ -23,6 +23,13 @@ export default function Post({ slug }) {
       title={post.title}
       description={post.seo.description}
       path={`/blog/${slug}`}
+      openGraph={{
+        images: [
+          {
+            url: `${post.seo.image.url}`,
+          },
+        ],
+      }}
     >
       <Container>
         <Wrapper>

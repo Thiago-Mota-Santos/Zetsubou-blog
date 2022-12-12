@@ -5698,6 +5698,9 @@ export type PostQuery = {
       description: string;
       publishedAt: Date;
       keyword: string[];
+      image: {
+        url: string;
+      };
     };
     __typename?: "Post";
     title: string;
@@ -5769,6 +5772,9 @@ export const PostDocument = gql`
         description
         publishedAt
         keywords
+        image {
+          url
+        }
       }
     }
   }

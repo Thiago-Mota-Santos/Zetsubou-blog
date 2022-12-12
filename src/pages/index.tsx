@@ -31,6 +31,13 @@ export default function Home() {
         title={data?.page?.seo.title}
         description={data?.page?.seo.description}
         path="/"
+        openGraph={{
+          images: [
+            {
+              url: `${data?.page?.seo.image}`,
+            },
+          ],
+        }}
       >
         <Banner title={data?.page?.title} description={data?.page?.subtitle} />
         <Content>

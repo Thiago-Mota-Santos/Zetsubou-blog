@@ -17,6 +17,9 @@ query Post($slug: String!) {
       description
       publishedAt
       keywords
+      image {
+        url
+      }
     }
   }
 }

@@ -1,63 +1,45 @@
-import { GetServerSideProps } from "next";
-import { PageDocument, PostsDocument, usePageQuery, usePostsQuery } from "./src/generated/graphql";
-import { client, ssrCache } from "./src/graphql/api";
 
-
-const [{ data }] = usePageQuery({
-    variables: {
-      slug: "page",
-    },
-  });
-
-  const [
-    {
-      data: { posts },
-    },
-  ] = usePostsQuery();
-
-
-const title = data?.page?.seo.title;
-const description = data?.page?.seo.description;
-const url = data?.page?.seo.image.url;
-
+const title = 'Zetsubou Blog'
+const description = 'Bem vindo ao Zetsubou Blog! Postagens corriqueiras sobre algum assunto aleatório que me interessar.'
+const url = '"https://media.graphassets.com/IGKyrXYSJeNXKi7q1q35"'
 
 const SEO = {
+  title,
+  canonical: "https://zetsubou-blog.vercel.app/",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://zetsubou-blog.vercel.app/",
+    siteName: "Zetsubou Blog",
     title,
-    canonical: 'https://zetsubou-blog.vercel.app/',
-    openGraph:{
-        type: 'website',
-        locale: 'pt_BR',
-        url: 'https://zetsubou-blog.vercel.app/',
-        siteName: 'Zetsubou Blog',
-        title,
-        description,
-        images: [
-            {
-                url,
-                alt: title,
-                width: 1280,
-                height: 720
-            }
-        ]
-    },
-    twitter: {
-        handle: '@ThiagoMota014',
-        site: '@site',
-        cardType: 'summary_large_image'
-    }
-}
+    description,
+    images: [
+      {
+        url,
+        alt: title,
+        width: 1280,
+        height: 720,
+      },
+    ],
+  },
+  twitter: {
+    handle: "@ThiagoMota014",
+    site: "@site",
+    cardType: "summary_large_image",
+  },
+};
 
 export default SEO;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    await Promise.all([
-      client.query(PostsDocument).toPromise(),
-      client.query(PageDocument, { slug: "blog" }).toPromise(),
-    ]);
-  
-    return {
-      props: {
-        urqlState: ssrCache.extractData(),
-      },
-    };
-  };
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   await Promise.all([
+//     client.query(PostsDocument).toPromise(),
+//     client.query(PageDocument, { slug: "blog" }).toPromise(),
+//   ]);
+
+//   return {
+//     props: {
+//       urqlState: ssrCache.extractData(),
+//     },
+//   };
+// };
