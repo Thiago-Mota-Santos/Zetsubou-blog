@@ -15,7 +15,7 @@ import { client, ssrCache } from "../graphql/api";
 export default function Home() {
   const [{ data }] = usePageQuery({
     variables: {
-      slug: "home",
+      slug: "page",
     },
   });
 

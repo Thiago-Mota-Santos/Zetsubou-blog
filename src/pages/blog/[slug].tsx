@@ -17,7 +17,6 @@ export default function Post({ slug }) {
       slug,
     },
   });
-
   return (
     <Page
       title={post.title}
