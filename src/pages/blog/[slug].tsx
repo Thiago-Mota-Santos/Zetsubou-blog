@@ -19,33 +19,33 @@ export default function Post({ slug }) {
   });
 
   return (
-    <Page
-      title={post.title}
-      description={post.seo.description}
-      path={`blog/${slug}`}
-      openGraph={{
-        images: [
-          {
-            url: `${post.seo.image.url.toString()}`,
-          },
-        ],
-      }}
-    >
-      <Container>
-        <Wrapper>
-          <Blog
-            title={post.title}
-            name={"Th"}
-            // date={post.date}
-            date={"03 Out, 2022"}
-            image={post.coverImage.url}
-            previewContent={null}
-            textContent={post.content.markdown}
-          />
-          <RightContent />
-        </Wrapper>
-      </Container>
-    </Page>
+    // <Page
+    //   title={post.title}
+    //   description={post.seo.description}
+    //   path={`blog/${slug}`}
+    //   openGraph={{
+    //     images: [
+    //       {
+    //         url: `${post.seo.image.url.toString()}`,
+    //       },
+    //     ],
+    //   }}
+    // >
+    <Container>
+      <Wrapper>
+        <Blog
+          title={post.title}
+          name={"Th"}
+          // date={post.date}
+          date={"03 Out, 2022"}
+          image={post.coverImage.url}
+          previewContent={null}
+          textContent={post.content.markdown}
+        />
+        <RightContent />
+      </Wrapper>
+    </Container>
+    // </Page>
   );
 }
 
