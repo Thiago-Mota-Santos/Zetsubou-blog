@@ -26,7 +26,7 @@ export default function Post({ slug }) {
       openGraph={{
         images: [
           {
-            url: `${post.seo.image.url}`,
+            url: `${post.seo.image.url.toString()}`,
           },
         ],
       }}
