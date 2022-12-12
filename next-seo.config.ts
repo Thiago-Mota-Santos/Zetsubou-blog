@@ -5,7 +5,7 @@ import { client, ssrCache } from "./src/graphql/api";
 
 const [{ data }] = usePageQuery({
     variables: {
-      slug: "home",
+      slug: "page",
     },
   });
 
@@ -16,8 +16,8 @@ const [{ data }] = usePageQuery({
   ] = usePostsQuery();
 
 
-const title = 'Zetsubou Blog'
-const description = "Postagens sobre assuntos aleatórios (as vezes)"
+const title = data?.page?.seo.title;
+const description = data?.page?.seo.description;
 const url = data?.page?.seo.image.url;
 
 
