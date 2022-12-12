@@ -34,7 +34,7 @@ export default function Home() {
         openGraph={{
           images: [
             {
-              url: `${data?.page?.seo.image.url}`,
+              // url: `${data?.page?.seo.image.url}`,
             },
           ],
         }}
