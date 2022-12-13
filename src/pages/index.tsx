@@ -27,32 +27,19 @@ export default function Home() {
 
   return (
     <>
-      <Page
-        title={data?.page?.seo.title}
-        description={data?.page?.seo.description}
-        path="/"
-        openGraph={{
-          images: [
-            {
-              // url: `${data?.page?.seo.image.url}`,
-            },
-          ],
-        }}
-      >
-        <Banner title={data?.page?.title} description={data?.page?.subtitle} />
-        <Content>
-          {posts.map((post) => (
-            <Card
-              key={post.slug}
-              img_url={post.coverImage.url.toString()}
-              title={post.title}
-              subtitle={"subtitle"}
-              description={post.excerpt}
-              href={`/blog/${post.slug}`}
-            />
-          ))}
-        </Content>
-      </Page>
+      <Banner title={data?.page?.title} description={data?.page?.subtitle} />
+      <Content>
+        {posts.map((post) => (
+          <Card
+            key={post.slug}
+            img_url={post.coverImage.url.toString()}
+            title={post.title}
+            subtitle={"subtitle"}
+            description={post.excerpt}
+            href={`/blog/${post.slug}`}
+          />
+        ))}
+      </Content>
     </>
   );
 }
