@@ -116,7 +116,12 @@ export const MainContent = styled.div`
         margin-bottom: 20px;
 
         > strong{
+            margin-left: 3px;
             color: var(--cite);
+        }
+
+        >em{
+            color: var(--description-dark);
         }
 
     }
