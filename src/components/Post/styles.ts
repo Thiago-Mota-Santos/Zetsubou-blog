@@ -115,6 +115,10 @@ export const MainContent = styled.div`
         color: var(--text-main);
         margin-bottom: 20px;
 
+        > strong{
+            color: var(--cite);
+        }
+
     }
 
     blockquote{

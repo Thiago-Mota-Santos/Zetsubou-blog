@@ -18,6 +18,8 @@ export default function Post({ slug }) {
     },
   });
 
+  console.log([slug, post.seo.description]);
+
   return (
     <Page
       path={slug}
