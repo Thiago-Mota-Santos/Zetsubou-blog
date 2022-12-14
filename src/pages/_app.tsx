@@ -2,6 +2,7 @@ import React from "react";
 import { Provider } from "urql";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Head from "next/head";
 
 import { DefaultSeo } from "next-seo";
 import SEO from "../../next-seo.config";
@@ -16,6 +17,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
+      <Head>
+        <link
+          rel="shortcut icon"
+          href="https://media.graphassets.com/xU10WhwGTTyjI7tlTwfr"
+        />
+      </Head>
       <Provider value={client}>
         <DefaultSeo {...SEO} />
         <GlobalStyle />

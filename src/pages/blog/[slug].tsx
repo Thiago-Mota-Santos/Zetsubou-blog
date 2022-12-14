@@ -5,7 +5,7 @@ import RightContent from "../../components/RightContent";
 
 import { Container, Wrapper } from "../../styles/slugstyle";
 import { client, ssrCache } from "../../graphql/api";
-import { ArticleJsonLd } from "next-seo";
+import { Page } from "../../components/pageSEO";
 
 export default function Post({ slug }) {
   const [
@@ -19,12 +19,10 @@ export default function Post({ slug }) {
   });
 
   return (
-    <ArticleJsonLd
-      url={`${slug}`}
+    <Page
+      path={slug}
       title={post.seo.title}
-      images={[post.seo.image.url.toString()]}
-      datePublished={undefined}
-      authorName={undefined}
+      imageUrl={[post.seo.image.url.toString()]}
       description={post.seo.description}
     >
       <Container>
@@ -41,7 +39,7 @@ export default function Post({ slug }) {
           <RightContent />
         </Wrapper>
       </Container>
-    </ArticleJsonLd>
+    </Page>
   );
 }
 

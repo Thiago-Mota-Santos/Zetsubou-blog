@@ -3,7 +3,6 @@ import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Content from "../components/Content";
-import { Page } from "../components/pageSEO";
 import {
   usePageQuery,
   PageDocument,
