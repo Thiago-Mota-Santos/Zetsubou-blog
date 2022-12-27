@@ -5693,6 +5693,7 @@ export type PostQueryVariables = Exact<{
 export type PostQuery = {
   __typename?: "Query";
   post?: {
+    date: Date;
     seo: {
       title: string;
       description: string;

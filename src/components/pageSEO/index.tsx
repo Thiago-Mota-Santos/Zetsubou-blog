@@ -1,20 +1,17 @@
-import { ArticleJsonLd } from "next-seo";
+import { ArticleJsonLd, NextSeo } from "next-seo";
 
 export function Page({ children, path, title, imageUrl, description }) {
   const url = `https://zetsubou-blog.vercel.app/blog/${path}`;
+
   return (
     <div>
-      <ArticleJsonLd
-        type="BlogPosting"
-        url={url}
+      <NextSeo
         title={title}
-        images={imageUrl}
-        authorName=""
-        publisherName=""
-        publisherLogo={imageUrl}
         description={description}
-        isAccessibleForFree={true}
-        datePublished={""}
+        openGraph={{
+          url,
+          title,
+        }}
       />
       {children}
     </div>

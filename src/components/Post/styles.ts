@@ -23,6 +23,8 @@ export const ImageContainer = styled.div`
         height: auto;
         object-fit: cover;
     }
+
+    
 `;
 
 export const ContentWrapper = styled.div`
@@ -108,7 +110,10 @@ export const MainContent = styled.div`
         max-width: 100%;  
         height: auto;
         object-fit: cover;
-        margin: 7px 0 7px 0;
+        /* margin: 7px 0 7px 0; */
+        display: flex;
+        margin: 0 auto;
+        
     }
 
     p{
@@ -116,7 +121,7 @@ export const MainContent = styled.div`
         margin-bottom: 20px;
 
         > strong{
-            margin-left: 3px;
+            font-size: 15px;
             color: var(--cite);
         }
 

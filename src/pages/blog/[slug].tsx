@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { PostDocument, usePostQuery } from "../../generated/graphql";
 import Blog from "../../components/Post";
 import RightContent from "../../components/RightContent";
+import { format } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
 
 import { Container, Wrapper } from "../../styles/slugstyle";
 import { client, ssrCache } from "../../graphql/api";
@@ -18,22 +20,26 @@ export default function Post({ slug }) {
     },
   });
 
-  console.log([slug, post.seo.description]);
+  const date = new Date(post.date);
+
+  const availableDateFormatted = format(date, "' 'dd' 'MMMM', 'yyyy'", {
+    locale: ptBR,
+  });
 
   return (
     <Page
       path={slug}
-      title={post.seo.title}
-      imageUrl={[post.seo.image.url.toString()]}
-      description={post.seo.description}
+      title={post?.seo?.title}
+      imageUrl={[post?.seo?.image.url.toString()]}
+      description={post?.seo?.description}
     >
       <Container>
         <Wrapper>
           <Blog
             title={post.title}
             name={"Th"}
-            // date={post.date}
-            date={"03 Out, 2022"}
+            // date={"haha"}
+            date={availableDateFormatted}
             image={post.coverImage.url}
             previewContent={null}
             textContent={post.content.markdown}
