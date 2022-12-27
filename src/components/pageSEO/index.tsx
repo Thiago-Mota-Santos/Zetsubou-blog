@@ -1,4 +1,4 @@
-import { ArticleJsonLd, NextSeo } from "next-seo";
+import { NextSeo } from "next-seo";
 
 export function Page({ children, path, title, imageUrl, description }) {
   const url = `https://zetsubou-blog.vercel.app/blog/${path}`;
@@ -11,6 +11,7 @@ export function Page({ children, path, title, imageUrl, description }) {
         openGraph={{
           url,
           title,
+          images: [imageUrl],
         }}
       />
       {children}
