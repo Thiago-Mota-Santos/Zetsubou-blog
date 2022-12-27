@@ -11,7 +11,14 @@ export function Page({ children, path, title, imageUrl, description }) {
         openGraph={{
           url,
           title,
-          images: [imageUrl],
+          images: [
+            {
+              url: imageUrl,
+              width: 800,
+              height: 600,
+              alt: "Og image Alt",
+            },
+          ],
         }}
       />
       {children}
