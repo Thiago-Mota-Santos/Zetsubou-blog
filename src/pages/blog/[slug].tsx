@@ -30,7 +30,7 @@ export default function Post({ slug }) {
     <Page
       path={slug}
       title={post?.seo?.title}
-      imageUrl={[post?.seo?.image.url.toString()]}
+      imageUrl={post?.seo?.image.url}
       description={post?.seo?.description}
     >
       <Container>
@@ -38,7 +38,6 @@ export default function Post({ slug }) {
           <Blog
             title={post.title}
             name={"Th"}
-            // date={"haha"}
             date={availableDateFormatted}
             image={post.coverImage.url}
             previewContent={null}
