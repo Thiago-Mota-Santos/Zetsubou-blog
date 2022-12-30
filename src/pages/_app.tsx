@@ -9,6 +9,7 @@ import SEO from "../../next-seo.config";
 
 import { client, ssrCache } from "../graphql/api";
 import { GlobalStyle } from "../styles/GlobalStyles";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   if (pageProps.urqlState) {
@@ -23,6 +24,22 @@ function MyApp({ Component, pageProps }) {
           href="https://media.graphassets.com/xU10WhwGTTyjI7tlTwfr"
         />
       </Head>
+      <div className="container">
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+        </Script>
+      </div>
       <Provider value={client}>
         <DefaultSeo {...SEO} />
         <GlobalStyle />

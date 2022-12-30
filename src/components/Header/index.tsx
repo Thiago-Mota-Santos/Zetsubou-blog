@@ -26,14 +26,15 @@ const Header: React.FC = () => {
   }
 
   const handleClick = () => setClick(!click);
+  const handleCloseMenu = () => setClick(null);
 
   return (
     <Container>
-      <MobileIcon onClick={handleClick}>
+      <MobileIcon onClick={handleClick} click={click}>
         {click ? <MenuIcon /> : <XIcon />}
       </MobileIcon>
 
-      <NavMenu click={click}>
+      <NavMenu onClick={handleCloseMenu} click={click}>
         <li>
           <Link href={"/"}>
             <a>home</a>

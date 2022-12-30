@@ -24,7 +24,7 @@ export const NavMenu = styled.ul`
     @media screen and (max-width: 960px){
       display: flex;
       flex-direction: column;
-      opacity: ${({ click }) => (click ? '1' : '0')};
+      opacity: ${({ click }) => ( click ? '1' : '0')};
       transition: all 0.8s ease;
       width: 100%;
       height: 30vh;
