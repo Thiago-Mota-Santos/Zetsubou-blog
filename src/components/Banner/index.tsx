@@ -11,7 +11,7 @@ interface Props {
 const Banner: React.FC<Props> = () => {
   return (
     <Container>
-      <Image src={BannerPic} priority={false} alt="Banner" />
+      <Image src={BannerPic} priority={true} alt="Banner" />
       <Wrapper>
         <header>
           <h1>{"Bem vindo ao Zetsubou Blog"}</h1>
