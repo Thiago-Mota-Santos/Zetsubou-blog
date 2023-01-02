@@ -4,7 +4,7 @@
 
 https://zetsubou-blog.vercel.app/
 
-​https://user-images.githubusercontent.com/75326612/210255723-d38304c3-8573-47f4-9c83-4d60294adec8.mp4
+https://user-images.githubusercontent.com/75326612/210256078-a68550a0-aa27-40fd-8b17-14a28b628750.mp4
 
 
 Projeto "Zetsubou Blog", tem o objetivo de criar um site de blog, para treinar crianção de páginas dinâmicas e estáticas com next js, e o consumo de API's CMS. Além do motivação de poder usar o site frequentemente para escrever pequenos artigos sobre assuntos mais corriqueiros (não relacionados a programação).
