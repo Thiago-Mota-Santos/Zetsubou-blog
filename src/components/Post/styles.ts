@@ -133,6 +133,19 @@ export const MainContent = styled.div`
             color: var(--description-dark);
         }
 
+        >a{
+            color: #308af2;
+            text-decoration: none;
+            font-size: 17px;
+
+
+            &:hover{
+                text-decoration: underline;
+                color: #409bd4;
+                
+            }
+        }
+
     }
 
     blockquote{

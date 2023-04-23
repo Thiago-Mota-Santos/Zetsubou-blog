@@ -26,20 +26,33 @@ interface postProps {
   textContent: string;
 }
 
+const link = ({ children, ...props }) => {
+  return (
+    <>
+      <a target="_blank" {...props}>
+        {children}
+      </a>
+    </>
+  );
+};
+
 const BlockQuote = ({ children }) => {
   return (
-    <blockquote>
-      <p>
-        <QuoteLeft />
-        {children}
-        <QuoteRight />
-      </p>
-    </blockquote>
+    <>
+      <blockquote>
+        <p>
+          <QuoteLeft />
+          {children}
+          <QuoteRight />
+        </p>
+      </blockquote>
+    </>
   );
 };
 
 const component = {
   blockquote: BlockQuote,
+  a: link,
 };
 
 const slug: React.FC<postProps> = ({
