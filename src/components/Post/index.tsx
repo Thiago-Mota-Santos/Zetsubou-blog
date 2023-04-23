@@ -4,7 +4,6 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
-
 import {
   Container,
   ContentWrapper,
@@ -14,6 +13,8 @@ import {
   ProfileIcon,
   ClockIcon,
   Preview,
+  QuoteLeft,
+  QuoteRight,
 } from "./styles";
 
 interface postProps {
@@ -24,6 +25,22 @@ interface postProps {
   previewContent: string;
   textContent: string;
 }
+
+const BlockQuote = ({ children }) => {
+  return (
+    <blockquote>
+      <p>
+        <QuoteLeft />
+        {children}
+        <QuoteRight />
+      </p>
+    </blockquote>
+  );
+};
+
+const component = {
+  blockquote: BlockQuote,
+};
 
 const slug: React.FC<postProps> = ({
   title,
@@ -61,6 +78,7 @@ const slug: React.FC<postProps> = ({
               // eslint-disable-next-line
               children={textContent}
               rehypePlugins={[rehypeRaw]}
+              components={component}
             ></ReactMarkdown>
           </MainContent>
         </ContentWrapper>

@@ -1,7 +1,8 @@
+import { FaQuoteRight } from 'react-icons/fa';
 
 import styled, { css } from 'styled-components';
 
-import { FaUserCircle, FaClock } from 'react-icons/fa'
+import { FaUserCircle, FaClock, FaQuoteLeft } from 'react-icons/fa'
 
 export const Container = styled.div`
     max-width: 850px;
@@ -100,6 +101,9 @@ export const MainContent = styled.div`
 
     
 
+    
+    
+
     >hr{
         border-bottom: 1px dotted rgb(69, 74, 77);
         margin-bottom: 20px;
@@ -133,17 +137,40 @@ export const MainContent = styled.div`
 
     blockquote{
         display: flex;
+        margin: 1.75rem 1rem 0.7rem 1.75rem;
         justify-content: center;
-        font-size: 14px;
+        font-size: 25.5px;
+        text-align: center;
         
         >p{
-            margin-bottom: 50px;
+            
          >strong{
             color:var(--cite);
          }
+
         }
     }
+
 `;
+
+export const QuoteLeft = styled(FaQuoteLeft)`
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: -16px;
+    fill: rgb(200, 197, 191);
+    height: 24px;
+    width: 24px;
+
+` 
+
+ export const QuoteRight = styled(FaQuoteRight)`
+    display: flex;
+    margin-left: 692px;
+    fill: rgb(200, 197, 191);
+    height: 24px;
+    width: 24px;
+` 
+
 
 const IconCss = css`
     width: 12px;
@@ -152,12 +179,16 @@ const IconCss = css`
     flex-shrink: 0;
 `;
 
+
+
 export const ProfileIcon = styled(FaUserCircle)`
     ${IconCss}
 `;
 export const ClockIcon = styled(FaClock)`
     ${IconCss}
 `;
+
+
 
 
 
