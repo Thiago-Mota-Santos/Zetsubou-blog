@@ -65,6 +65,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       urqlState: ssrCache.extractData(),
       slug: params.slug,
     },
-    revalidate: 1, // 4 hours
+    revalidate: 60 * 60 * 4, // 4 hours
   };
 };
