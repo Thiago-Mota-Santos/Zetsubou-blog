@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
     --background-box: #262A2B;
     --border-bottom-ol: rgb(52,56,58);
     --cite: #a8a095;
-
+    --h2: rgb(210, 207, 203);
     
     
 }

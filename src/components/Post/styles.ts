@@ -99,9 +99,13 @@ export const MainContent = styled.div`
     color: #beb9b0;
     margin-left: 0;
 
-    
 
-    
+    >h2{
+       color: var(--h2);
+       text-align: center;
+       margin-bottom: 16px;
+       
+    }
     
 
     >hr{
@@ -125,7 +129,7 @@ export const MainContent = styled.div`
         margin-bottom: 20px;
 
         > strong{
-            font-size: 15px;
+            font-size: 17px;
             color: var(--cite);
         }
 

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 import { Container, MenuIcon, MobileIcon, NavMenu, XIcon } from "./styles";
 
@@ -25,7 +24,9 @@ const Header: React.FC = () => {
     window.addEventListener("resize", showButton);
   }
 
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    setClick(!click);
+  };
 
   return (
     <Container>

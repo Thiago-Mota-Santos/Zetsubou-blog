@@ -81,7 +81,13 @@ const slug: React.FC<postProps> = ({
             </ul>
           </TitlePost>
           <ImageContainer>
-            <Image src={image} width={1400} height={600} alt={"Image-post"} />
+            <Image
+              src={image}
+              width={1400}
+              height={600}
+              alt={"Image-post"}
+              priority
+            />
           </ImageContainer>
           <MainContent>
             <Preview>{previewContent}</Preview>
