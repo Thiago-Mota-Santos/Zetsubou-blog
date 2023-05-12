@@ -13,14 +13,5 @@ export const Wrapper = styled.div`
    overflow-x: hidden;
    display:flex;
    justify-content: center;
-
-   @media screen  and (max-width: 890px){
-    flex-direction: column;
-
-    
-    
-   }
-
-
 `;
 

@@ -28,13 +28,13 @@ export const ImageContainer = styled.div`
     
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div` 
+    max-width: 100%;
     margin-left: 53px;
     border: 2.5px solid var(--border-post);
-    padding: 0 0.7rem 0 10px;
-    
-
+    padding: 0 0.7rem 0 10px; 
 `; 
+
 export const TitlePost = styled.div`
     line-height: 1.75rem;  
     margin: 0 auto;
@@ -90,8 +90,6 @@ export const Preview = styled.div`
     
 `;
 
-
-
 export const MainContent = styled.div`
     margin-top: 1.5rem;
     width: 100%;
@@ -99,15 +97,16 @@ export const MainContent = styled.div`
     color: #beb9b0;
     margin-left: 0;
 
-
     >h2{
        color: var(--h2);
        text-align: center;
        margin-bottom: 16px;
        
+        @media screen and (max-width: 769px) {
+            font-size: 18px;
+        }
     }
     
-
     >hr{
         border-bottom: 1px dotted rgb(69, 74, 77);
         margin-bottom: 20px;
@@ -118,15 +117,14 @@ export const MainContent = styled.div`
         max-width: 100%;  
         height: auto;
         object-fit: cover;
-        /* margin: 7px 0 7px 0; */
         display: flex;
         margin: 0 auto;
-        
     }
 
     p{
         color: var(--text-main);
         margin-bottom: 20px;
+        letter-spacing: -0.5px;
 
         > strong{
             font-size: 17px;
@@ -148,29 +146,32 @@ export const MainContent = styled.div`
                 color: #409bd4;
                 
             }
-        }
-
-    }
-
+       }
+}
     blockquote{
         display: flex;
+        position: relative;
         margin: 1.75rem 1rem 0.7rem 1.75rem;
         justify-content: center;
         font-size: 25.5px;
+        overflow-wrap: break-word;
         text-align: center;
-        
+ 
         >p{
-            
          >strong{
             color:var(--cite);
          }
-
         }
     }
 
 `;
 
+
+
 export const QuoteLeft = styled(FaQuoteLeft)`
+    position: absolute;
+    left: -10px; 
+    transform: translateY(-50%);
     display: flex;
     margin-bottom: 10px;
     margin-left: -16px;
@@ -181,6 +182,9 @@ export const QuoteLeft = styled(FaQuoteLeft)`
 ` 
 
  export const QuoteRight = styled(FaQuoteRight)`
+    position: absolute;
+    right: -10px; 
+    transform: translateY(-50%);
     display: flex;
     margin-left: 692px;
     fill: rgb(200, 197, 191);
