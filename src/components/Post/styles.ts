@@ -139,6 +139,7 @@ export const MainContent = styled.div`
             color: #308af2;
             text-decoration: none;
             font-size: 17px;
+            margin-right: 4px;
 
 
             &:hover{
