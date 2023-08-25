@@ -5,7 +5,7 @@ import { Container } from "./styles";
 const Footer: React.FC = () => {
   return (
     <Container>
-      <p>Copyright © 2022 Thzinh</p>
+      <p>{`Copyright © ${new Date().getFullYear()} Thzinh`}</p>
     </Container>
   );
 };
