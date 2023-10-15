@@ -3,6 +3,7 @@ import { Provider } from "urql";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 
 import { DefaultSeo } from "next-seo";
 import SEO from "../../next-seo.config";
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }) {
         <GlobalStyle />
         <Header />
         <Component {...pageProps} />
+        <Analytics />
         <Footer />
       </Provider>
     </div>

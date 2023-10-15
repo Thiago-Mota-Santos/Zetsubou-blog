@@ -10,6 +10,7 @@
     "generate-types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "date-fns": "^2.29.3",
     "graphql": "^16.5.0",
     "next": "12.2.3",
