@@ -17,7 +17,7 @@ const Banner: React.FC<Props> = () => {
           <h1>{"Bem vindo ao Zetsubou Blog"}</h1>
           <p>
             {
-              "O maior overthink está aqui! Venha ao desespero, vamos nos desesperar e burrar juntos!"
+              "Aqui você verá pensamentos sobre diversos assuntos"
             }
           </p>
         </header>

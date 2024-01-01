@@ -16,6 +16,7 @@ import {
   QuoteLeft,
   QuoteRight,
 } from "./styles";
+import AnimatedLayout from "../AnimatedLayout";
 
 interface postProps {
   title: string;
@@ -92,7 +93,6 @@ const slug: React.FC<postProps> = ({
           <MainContent>
             <Preview>{previewContent}</Preview>
             <hr />
-
             <ReactMarkdown
               // eslint-disable-next-line
               children={textContent}
