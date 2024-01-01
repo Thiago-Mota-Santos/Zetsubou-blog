@@ -16,7 +16,6 @@ import {
   QuoteLeft,
   QuoteRight,
 } from "./styles";
-import AnimatedLayout from "../AnimatedLayout";
 
 interface postProps {
   title: string;
