@@ -91,6 +91,7 @@ export const Preview = styled.div`
 `;
 
 export const MainContent = styled.div`
+    position: relative;
     margin-top: 1.5rem;
     width: 100%;
     font-size: 17px;
@@ -149,7 +150,7 @@ export const MainContent = styled.div`
             }
        }
 }
-    blockquote{
+    blockquote {
         display: flex;
         position: relative;
         margin: 1.75rem 1rem 0.7rem 1.75rem;
@@ -158,13 +159,25 @@ export const MainContent = styled.div`
         overflow-wrap: break-word;
         text-align: center;
  
-        >p{
-         >strong{
+        >p {
+         > strong{
             color:var(--cite);
          }
         }
     }
+    code {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 292px;
+    color: #A0988E;
+    font-style: italic;
+}
 
+code::before {
+    content: '—'; 
+    margin-right: 4px;
+    color: #A0988E;
+}
 `;
 
 
