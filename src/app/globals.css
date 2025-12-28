@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Domine, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #181A1B;
+}
+
+html {
+  min-height: 100%;
+  background: #b2aca2;
+}
+
+*, button, input {
+  border: 0;
+  background: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --header: #FFFFFF;
+  --header-dark: #181A1B;
+  --header-item: #BB83E6;
+  --header-item-hover: #9b6bc6;
+  --title: #3a3a3a;
+  --title-dark: #e0dbd3;
+  --description: #666666;
+  --description-dark: #c8c3bc;
+  --border: #3B4042;
+  --title-banner: #FFFFFF;
+  --border-banner: rgba(0, 0, 0, 0.29);
+  --post: #d4cfc5;
+  --title-post: #e8e4dc;
+  --text-main: #d4cfc5;
+  --border-post: rgb(48, 52, 54);
+  --border-bottom: rgb(51, 55, 57);
+  --background-box: #262A2B;
+  --border-bottom-ol: rgb(52,56,58);
+  --cite: #c8c3bc;
+  --h2: rgb(230, 227, 223);
+  --link-color: #BB83E6;
+  --link-hover: #9b6bc6;
+}
+
+.post-content h2 {
+  color: var(--h2);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 769px) {
+  .post-content h2 {
+    font-size: 18px;
+  }
+}
+
+.post-content hr {
+  border-bottom: 1px dotted rgb(69, 74, 77);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  margin: 0 auto;
+}
+
+.post-content p {
+  color: var(--text-main);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.post-content p strong {
+  font-size: 17px;
+  color: var(--cite);
+}
+
+.post-content p em {
+  color: var(--description-dark);
+}
+
+.post-content p a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 4px;
+}
+
+.post-content p a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+.post-content blockquote p strong {
+  color: var(--cite);
+}
+
+.post-content code {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 292px;
+  color: #A0988E;
+  font-style: italic;
+}
+
+.post-content code::before {
+  content: '—';
+  margin-right: 4px;
+  color: #A0988E;
+}
