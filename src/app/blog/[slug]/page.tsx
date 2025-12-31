@@ -107,10 +107,11 @@ export default async function BlogPostPage({
     notFound()
   }
   const article = result.data
-  const formattedDate = new Date(article.date).toLocaleDateString('pt-BR', {
+  const formattedDate = new Date(article.date + 'T00:00:00').toLocaleDateString('pt-BR', {
     day: '2-digit',
     month: 'long',
     year: 'numeric',
+    timeZone: 'America/Sao_Paulo'
   })
   return (
     <div className="max-w-[850px] mx-auto relative py-[15px] bg-[var(--header-dark)] overflow-hidden">
@@ -153,4 +154,5 @@ export default async function BlogPostPage({
     </div>
   )
 }
+
 
